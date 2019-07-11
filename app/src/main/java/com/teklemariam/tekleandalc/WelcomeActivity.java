@@ -18,14 +18,12 @@ public class WelcomeActivity extends AppCompatActivity {
         abAlcButton = findViewById(R.id.button_about_alc);
         myProfileButton= findViewById(R.id.button_my_profile);
 
-        abAlcButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(WelcomeActivity.this, AboutALCActivity.class);
-                startActivity(intent);
-            }
-        });
+        startALCScreen(abAlcButton);
 
+        startProfileScreen(myProfileButton);
+    }
+
+    private void startProfileScreen(Button myProfileButton) {
         myProfileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,8 +31,15 @@ public class WelcomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
 
-
-
+    private void startALCScreen(Button abAlcButton) {
+        abAlcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WelcomeActivity.this, AboutALCActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
