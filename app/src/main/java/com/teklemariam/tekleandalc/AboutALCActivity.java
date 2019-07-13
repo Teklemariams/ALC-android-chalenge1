@@ -1,18 +1,17 @@
 package com.teklemariam.tekleandalc;
 
-import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
+import android.net.http.SslError;
 import android.os.Bundle;
-import android.webkit.JavascriptInterface;
+import android.support.v7.app.AppCompatActivity;
+import android.webkit.SslErrorHandler;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
 
 public class AboutALCActivity extends AppCompatActivity {
-    private String url = "https://www.google.com/";
+    private String url = "https://andela.com/alc/";
     private WebView webView;
-    //    private WebView alcWebView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,26 +20,19 @@ public class AboutALCActivity extends AppCompatActivity {
 
         webView = new WebView(this);
         setContentView(webView);
-        webView.setWebViewClient(new WebViewClient());
-
-        webView.loadUrl(url);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-
-        class WebAppInterface {
-            Context mContext;
-
-            WebAppInterface(Context c) {
-                mContext = c;
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+                handler.proceed();
             }
+        });
 
-            @JavascriptInterface
-            public void showToast(String toast) {
-                Toast.makeText(mContext, toast, Toast.LENGTH_SHORT).show();
-            }
-        }
-        webView.addJavascriptInterface(new WebAppInterface(this), "Android");
+        webView.loadUrl(url);
+
+
     }
 
     @Override
