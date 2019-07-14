@@ -23,16 +23,9 @@ public class AboutALCActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         webView = findViewById(R.id.webview_alc);
 
-        progressDialog = ProgressDialog.show(this, "Loading", "Please wait...");
-        progressDialog.setCanceledOnTouchOutside(true);
-        progressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
-            @Override
-            public void onCancel(DialogInterface dialog) {
-                progressDialog.dismiss();
-            }
-        });
-        progressDialog.setCancelable(false);
-        progressDialog.show();
+//        progressDialog = ProgressDialog.show(this, "Loading", "Please wait...");
+//        progressDialog.setCancelable(false);
+//        progressDialog.show();
 
         webView = new WebView(this);
         setContentView(webView);
@@ -43,12 +36,12 @@ public class AboutALCActivity extends AppCompatActivity {
             @Override
             public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                 handler.proceed();
-                progressDialog.dismiss();
+//                progressDialog.dismiss();
             }
 
             @Override
             public void onPageFinished(WebView view, String url) {
-                progressDialog.dismiss();
+//                progressDialog.dismiss();
             }
 
         });

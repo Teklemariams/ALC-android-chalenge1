@@ -7,29 +7,35 @@
     tools:context=".WelcomeActivity">
 
     <TextView
+        android:id="@+id/welcometext"
         style="@style/TitleTextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/bauhaus"
         android:text="Welcome to ALC 4.0" />
 
     <Button
         android:id="@+id/button_about_alc"
+
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/bauhaus"
         android:text="about ALC" />
 
     <Button
         android:id="@+id/button_my_profile"
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
+        android:fontFamily="@font/bauhaus"
         android:text="My profile" />
 
 </LinearLayout>
