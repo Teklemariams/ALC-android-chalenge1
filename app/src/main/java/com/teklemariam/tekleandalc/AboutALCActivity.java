@@ -1,6 +1,7 @@
 package com.teklemariam.tekleandalc;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,9 +20,17 @@ public class AboutALCActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_alc);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         webView = findViewById(R.id.webview_alc);
 
         progressDialog = ProgressDialog.show(this, "Loading", "Please wait...");
+        progressDialog.setCanceledOnTouchOutside(true);
+        progressDialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialog) {
+                progressDialog.dismiss();
+            }
+        });
         progressDialog.setCancelable(false);
         progressDialog.show();
 
@@ -45,7 +54,6 @@ public class AboutALCActivity extends AppCompatActivity {
         });
 
         webView.loadUrl(url);
-
     }
 
     @Override

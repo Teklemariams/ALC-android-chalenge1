@@ -11,15 +11,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".WelcomeActivity"
+                    android:label="@string/activity_name_welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutALCActivity" />
-        <activity android:name=".MyProfileActivity"></activity>
+        <activity android:name=".AboutALCActivity"
+            android:label="@string/activity_name_aboutalc"
+            android:parentActivityName=".WelcomeActivity"/>
+        <activity android:name=".MyProfileActivity"
+            android:label="@string/activity_name_myprofile"
+            android:parentActivityName=".WelcomeActivity"></activity>
     </application>
 
 </manifest>
