@@ -1,7 +1,6 @@
 package com.teklemariam.tekleandalc;
 
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.net.http.SslError;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
