@@ -3,4 +3,13 @@
     <string name="activity_name_welcome">ALC 4 Phase 1</string>
     <string name="activity_name_aboutalc">About ALC</string>
     <string name="activity_name_myprofile">My Profile</string>
+    <string name="welcome_text">Welcome to ALC 4.0</string>
+    <string name="about_button_text">about ALC</string>
+    <string name="profile_button_text">My profile</string>
+    <string name="myname_text">Teklemariam Sintayehu</string>
+    <string name="track_text">Android</string>
+    <string name="country_text">Ethiopia</string>
+    <string name="myemail_text">teklemarry@gamil.com</string>
+    <string name="phoneno_text">+251930109276</string>
+    <string name="linkedin_text">www.linkedin.com/teklemariams</string>
 </resources>

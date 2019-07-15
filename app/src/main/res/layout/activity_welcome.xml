@@ -14,18 +14,19 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/bauhaus"
-        android:text="Welcome to ALC 4.0" />
+        android:text="@string/welcome_text"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/button_about_alc"
-
         style="@style/ButtonStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/bauhaus"
-        android:text="about ALC" />
+        android:text="@string/about_button_text" />
 
     <Button
         android:id="@+id/button_my_profile"
@@ -33,8 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/bauhaus"
-        android:text="My profile" />
+        android:text="@string/profile_button_text" />
 
 </LinearLayout>

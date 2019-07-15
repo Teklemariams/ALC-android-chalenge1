@@ -7,6 +7,7 @@
     tools:context=".MyProfileActivity">
 
     <ImageView
+        android:layout_marginTop="10dp"
         android:id="@+id/image_profile"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:text="Teklemariam Sintayehu" />
+        android:text="@string/myname_text" />
 
     <View
         android:layout_width="match_parent"
@@ -34,41 +35,35 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="horizontal">
-
         <TextView
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Track :" />
-
         <TextView
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Android" />
+            android:text="@string/track_text" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="horizontal">
-
         <TextView
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Country :" />
-
         <TextView
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" Ethiopia" />
+            android:text="@string/country_text" />
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -86,7 +81,7 @@
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" teklemarry@gamil.com" />
+            android:text="@string/myemail_text" />
     </LinearLayout>
 
     <LinearLayout
@@ -102,12 +97,11 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Phone no:" />
-
         <TextView
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" +251930109276" />
+            android:text="@string/phoneno_text" />
     </LinearLayout>
 
     <LinearLayout
@@ -115,19 +109,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:orientation="horizontal">
-
         <TextView
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="Linkedin:" />
-
         <TextView
             style="@style/OrdinaryTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="www.linkedin.com/teklemariams" />
+            android:text="@string/linkedin_text" />
     </LinearLayout>
-
 </LinearLayout>
